@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+public class Tile : MonoBehaviour
+{
+    [SerializeField] private Enemy _enemyTemplate;
+    [SerializeField] private Food _foodTemplate;
+    
+    [SerializeField] private float _width;
+    [SerializeField] private float _heigh;
+    [SerializeField] private int _maxEnemy;
+    [SerializeField] private int _maxFood;
+
+    [SerializeField] private NextTrigger _nextTrigger;
+
+    public event Action<Tile> NextTriggered;
+
+    private List<Enemy> _enemies = new List<Enemy>();
+
+    private void OnEnable()
+    {
+        _nextTrigger.Triggered += OnTriggered;
+    }
+
+    private void OnDisable()
+    {
+        _nextTrigger.Triggered -= OnTriggered;
+    }
+
+    public void Init()
+    {
+        foreach (var enemy in _enemies)
+            enemy.gameObject.SetActive(false);
+
+
+        for (var i = 0; i < Random.Range(1, _maxEnemy + 1); i++)
+        {
+            float x = Random.Range(-_width / 2, _width / 2);
+            float y = Random.Range(_heigh / 2, _heigh);
+            var position = transform.position + new Vector3(x, y);
+            Enemy enemy = GetAvailableEnemy();
+            enemy.transform.position = position;
+            enemy.StartMove();
+        }
+
+        for (var i = 0; i < Random.Range(1, _maxFood + 1); i++)
+        {
+            float x = Random.Range(-_width / 2, _width / 2);
+            float y = Random.Range(-_heigh / 2, _heigh / 2);
+            var position = transform.position + new Vector3(x, y);
+
+            Instantiate(_foodTemplate, position, Quaternion.identity, this.transform);
+        }
+    }
+
+    private Enemy GetAvailableEnemy()
+    {
+        Enemy enemy = _enemies.FirstOrDefault(enemy => enemy.gameObject.activeSelf == false);
+        if (enemy == null)
+            enemy = Instantiate(_enemyTemplate, transform);
+        return enemy;
+    }
+
+    private void OnTriggered()
+    {
+        NextTriggered?.Invoke(this);
+    }
+}
