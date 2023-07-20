@@ -355,11 +355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac49582d598761e4b5919e5523a987f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedX: 0.135
-  speedY: 0
-  gravity: -0.005
-  jumpStrength: 0.02
-  trail: {fileID: 1692421529}
+  _speedX: 0.11
+  _speedY: 0
+  _gravity: -0.006
+  _jumpStrength: 0.025
+  _trail: {fileID: 1692421529}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e56ec4e587c803b184bba834f05719c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuText: {fileID: 861299528}
+  _menuText: {fileID: 861299528}
 --- !u!1 &617203173
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,8 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d4d76e75aac2b64a3695094a13c7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 5277283862659190815, guid: 1812d75d7707837b6bdddfcd989b4f36, type: 3}
-  tileWidth: 26.62
+  _tilePrefab: {fileID: 5277283862659190815, guid: 1812d75d7707837b6bdddfcd989b4f36, type: 3}
+  _tileWidth: 26
 --- !u!1 &708066492
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press SPACEBAR to start.
+  m_Text: "\u0416\u043C\u0438, \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0447\u0430\u0442\u044C!"
 --- !u!222 &861299529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -646,8 +646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 60, y: 40}
+  m_AnchoredPosition: {x: 0, y: -31.5}
+  m_SizeDelta: {x: 80, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229956121
 MonoBehaviour:
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -671,11 +671,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 54
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5e4e116762a58088cb26691a2e7170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counter: {fileID: 1377887930}
+  _counter: {fileID: 1377887930}
 --- !u!1 &2029766416
 GameObject:
   m_ObjectHideFlags: 0
