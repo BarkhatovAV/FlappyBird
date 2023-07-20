@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerMovement))]
-public class MenuLock : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
     [SerializeField] private Text _menuText;
 

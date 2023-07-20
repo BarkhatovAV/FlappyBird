@@ -16,10 +16,12 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         _speedY += _gravity;
-        if (_isSoftJumping) _speedY += _jumpStrength;
+
+        if (_isSoftJumping) 
+            _speedY += _jumpStrength;
         
-        _trail.position += new Vector3(0, _speedY);
         transform.position += new Vector3(_speedX,0);
+        _trail.position += new Vector3(0, _speedY);
     }
 
     public void Jump(InputAction.CallbackContext context)

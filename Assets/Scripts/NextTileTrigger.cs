@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class NextTrigger : MonoBehaviour
+public class NextTileTrigger : MonoBehaviour
 {
     public event Action Triggered;
 
