@@ -14,7 +14,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private int _maxEnemy;
     [SerializeField] private int _maxFood;
 
-    [SerializeField] private NextTrigger _nextTrigger;
+    [SerializeField] private NextTileTrigger _nextTrigger;
 
     public event Action<Tile> NextTriggered;
 
