@@ -9,6 +9,7 @@ public class MenuLock : MonoBehaviour
     public void Action()
     {
         GetComponent<PlayerMovement>().enabled = true;
-        _menuText.gameObject.SetActive(false);
+        if(_menuText)
+            _menuText.gameObject.SetActive(false);
     }
 }
