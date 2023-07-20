@@ -9,9 +9,9 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        float delay = Random.Range(0, _duration);
-        _endValue = - transform.position.y;
-        transform.DOMoveY(_endValue, _duration).SetLoops(-1, LoopType.Yoyo).SetDelay(delay);
+        //float delay = Random.Range(0, _duration);
+        //_endValue = - transform.position.y;
+        //transform.DOMoveY(_endValue, _duration).SetLoops(-1, LoopType.Yoyo).SetDelay(delay);
     }
 
     public void StartMove()

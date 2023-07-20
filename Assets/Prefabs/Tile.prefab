@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyTemplate: {fileID: 7605019376813485181, guid: 7875f3ff29c1fbdaea31231604d6843e, type: 3}
   _foodTemplate: {fileID: 7324659669467536737, guid: 1e763fa16997c453bbbf1c50e0ac730e, type: 3}
-  _width: 20
+  _width: 26
   _heigh: 3.5
   _maxEnemy: 3
   _maxFood: 2
